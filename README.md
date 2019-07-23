@@ -30,7 +30,6 @@ PyTorch version| torchvision version  | Device | Time |
 | 1.1.0 | 0.30 | i5-4500U (x86_64) | 0.076s |
 | 1.1.0 | 0.30 | Pi2 (ARMv7) | 3.56s |
 | 1.1.0 | 0.30 | LG G6 (AArch64) | 0.481s |
-|--|--|--|--|
 
 ### 4. Python 2.x/3.4/3.5/3.6 builds?
 
@@ -43,6 +42,16 @@ Sadly, Fedora stopped the support for ARMv6 a while back so I cannot use the sam
 ### 6. Keeping up with the upstream
 
 I will try to publish new builds within 72h of new release announcements. If you see an outdated build open an issue.
+
+### 7. Build options
+
+There are for small devices only, so no CUDA, no DISTRIBUTED etc.:
+
+```
+export NO_CUDA=1
+export NO_DISTRIBUTED=1
+export NO_MKLDNN=1 
+```
 
 # Remarks
 
