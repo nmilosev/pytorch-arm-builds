@@ -42,10 +42,10 @@ after the torch and torchvision packages have been installed. It will do inferen
 
 PyTorch version| torchvision version  | Device | Time |
 |--|--|--|--|
-| 1.1.0 | 0.30 | i5-4500U (x86_64) | 0.076s |
-| 1.1.0 | 0.30 | Pi2 (ARMv7) | 3.56s |
-| 1.1.0 | 0.30 | LG G6 (AArch64) | 0.481s |
-| 1.1.0 | 0.30 | Pi0WH (ARMv6) - Raspbian build | 4.654s |
+| 1.1.0 | 0.3.0 | i5-4500U (x86_64) | 0.076s |
+| 1.1.0 | 0.3.0 | Pi2 (ARMv7) | 3.56s |
+| 1.1.0 | 0.3.0 | LG G6 (AArch64) | 0.481s |
+| 1.1.0 | 0.3.0 | Pi0WH (ARMv6) - Raspbian build | 4.654s |
 
 ### 4. Python 2.x/3.4/3.5/3.6 builds?
 
@@ -53,7 +53,7 @@ I only build with the latest Python 3 version in my Fedora build system (current
 
 ### 5. ARMv6 (Pi Zero) builds?
 
-Sadly, Fedora stopped the support for ARMv6 a while back so I cannot use the same process to build for Pi Zero. Check other project if you need inference (e.g. ONNX Runtime). If you happen to have a build for ARMv6 I would love to have it!
+Sadly, Fedora stopped the support for ARMv6 a while back so I cannot use the same process to build for Pi Zero. Check other projects if you need inference (e.g. ONNX Runtime). If you happen to have a build for ARMv6 I would love to have it!
 
 **Update**: You can now have ARMv6 builds! :) These are built a little bit differently (no numpy support for now, coming soon). 
 
