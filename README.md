@@ -77,6 +77,44 @@ export MAX_JOBS=8
 
 Look through the commit history! This repository was started in July 2019.
 
+### 9. Import Errors
+
+It is possible that after installation when trying to import torch the following error may occur:
+
+```
+Traceback (most recent call last):
+   File "<stdin>", line 1, in <module>
+   File "/usr/lib/python3.6/site-packages/torch/__init__.py", line 45, in <module>
+     from torch._C import *
+ModuleNotFoundError: No module named 'torch._C'
+```
+
+The reason for this is that the precompiled file has some libraries whose name must be renamed. To do so, you must enter the torch folder inside the python3.7 libraries folder.
+
+Depending on where you installed your python, the following path may vary, but usually it is (if you are not using a virtual environment):
+
+```
+$ cd /usr/local/python3.7/dist-packages/torch
+```
+
+Inside this folder you will find two files with names like this:
+
+```
+_CXXXXXXXX.so
+_dlXXXXXXXX.so
+```
+
+(XXXXXXX represents just any name)
+
+You will need to rename these files so that their names are as follows:
+
+```
+_C.so
+_dl.so
+```
+
+After this process you should already be able to run torch / torchvision normally. 
+
 # Remarks
 
 I provide no support for these builds, but feel free to ping me if something is broken. I am not to be held responsible if you burn something or fall down the stairs while using these.
